@@ -1272,3 +1272,12 @@ footer .credits a {
     bottom: 15px;
   }
 }
+
+.edu-logo:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.edu-logo {
+  transition: transform 0.5s;
+  transition-timing-function: ease-out;
+}
