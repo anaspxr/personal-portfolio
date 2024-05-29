@@ -5,13 +5,20 @@
   License: https://bootstrapmade.com/license/
 */
 
-/*======================================
-//--//-->   STYLES GENERALES
-======================================*/
+:root {
+  --purpleMain: #ceb6f1;
+  --purpleDark: #9789ab;
+  --purpleDarker: #604d7a;
+  --purpleLight: #dbcaf4;
+  --purpleText: #b0a8bd;
+  --purpleHeader: #e0d2f2;
+  --purpleBg: #050009;
+  --purpleBg2: #160623;
+}
 
 body {
-  background-color: #0d0d0d;
-  color: #968fa5;
+  background-color: var(--purpleBg);
+  color: var(--purpleText);
 }
 
 h1,
@@ -20,16 +27,16 @@ h3,
 h4,
 h5,
 h6 {
-  color: #70678e;
+  color: var(--purpleHeader);
 }
 
 a {
-  color: #a176dd;
+  color: var(--purpleMain);
   transition: all 0.5s ease-in-out;
 }
 
 a:hover {
-  color: #8a0cff;
+  color: white;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -137,7 +144,7 @@ a:hover {
 
 .title-s {
   font-weight: 600;
-  color: #d9c3fb;
+  color: var(--purpleLight);
   font-size: 1.1rem;
 }
 
@@ -154,7 +161,7 @@ a:hover {
 }
 
 .subtitle-a {
-  color: #4e4e4e;
+  color: var(--purpleDark);
 }
 
 .line-mf {
@@ -216,12 +223,12 @@ a:hover {
   border-radius: 50%;
   line-height: 1.4;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #371a5b;
+  box-shadow: 0 0 0 3px var(--purpleBg2);
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #371a5b;
+  background-color: var(--purpleBg2);
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
@@ -246,7 +253,7 @@ a:hover {
 }
 
 .list-ico span {
-  color: #0078ff;
+  color: var(--purpleMain);
   margin-right: 10px;
 }
 
@@ -326,7 +333,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #0078ff;
+  background: var(--purpleBg2);
   color: #fff;
   width: 44px;
   height: 44px;
@@ -475,37 +482,37 @@ a:hover {
 
 .navbar-b.navbar-reduce {
   transition: all 0.5s ease-in-out;
-  background-color: #000000;
+  background-color: var(--purpleBg);
   padding-top: 15px;
   padding-bottom: 15px;
   opacity: 97%;
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #9a7db4;
+  color: var(--purpleDark);
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #9000ff;
+  background-color: var(--purpleMain);
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #713eca;
+  color: #fff;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #b066ff;
+  color: var(--purpleLight);
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #c26cff;
+  color: var(--purpleLight);
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #1b1b1b;
+  background-color: var(--purpleLight);
 }
 
 .navbar-b .navbar-brand {
@@ -690,7 +697,7 @@ a:hover {
 }
 
 .skill-mf .progress {
-  background-color: #cde1f8;
+  background-color: var(--purpleLight);
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
   height: 0.7rem;
@@ -698,7 +705,7 @@ a:hover {
 
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #0078ff;
+  background-color: var(--purpleDarker);
 }
 
 /*======================================
@@ -769,11 +776,18 @@ a:hover {
 //--//-->   PORTFOLIO
 ======================================*/
 
+@media (min-width: 1200px) {
+  .work-box {
+    height: 400px;
+  }
+}
+
 .work-box {
+  border-radius: 20px;
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #fff;
+  background-color: var(--purpleBg2);
 }
 
 .work-box:hover img {
@@ -782,6 +796,7 @@ a:hover {
 }
 
 .work-img {
+  border-radius: 20px 20px 0 0;
   display: block;
   overflow: hidden;
 }
@@ -800,7 +815,7 @@ a:hover {
 }
 
 .work-content .w-more .w-ctegory {
-  color: #0078ff;
+  color: var(--purpleDarker);
 }
 
 .work-content .w-like {
@@ -818,6 +833,7 @@ a:hover {
 }
 
 .w-title {
+  color: var(--purpleDarker);
   font-size: 1.2rem;
 }
 
@@ -1151,15 +1167,15 @@ footer .credits a {
 }
 
 .button:hover {
-  background-color: #1a002f;
+  background-color: var(--purpleBg2);
   color: #fff;
   transition: all 500ms ease;
 }
 
 .button-a {
-  background-color: #301a48;
-  color: #cab5ca;
-  border-color: #cde1f8;
+  background-color: var(--purpleBg);
+  color: var(--purpleText);
+  border-color: var(--purpleLight);
 }
 
 .button-big {
