@@ -137,18 +137,20 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-// const progressObserver = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       entry.target.style.width = `${entry.target.getAttribute(
-//         "aria-valuenow"
-//       )}%`;
-//     }
-//   });
-// });
-// const progressBar = document.querySelectorAll(".progress-bar");
-// progressBar.forEach((el) => progressObserver.observe(el));
+//progress bar animation
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      var delay = 500;
+      $(".progress-bar").each(function (i) {
+        $(this)
+          .delay(delay * i)
+          .animate({ width: $(this).attr("aria-valuenow") + "%" }, delay);
+      });
+    }
+  });
+});
+progressObserver.observe(document.getElementById("skills"));
