@@ -1109,8 +1109,8 @@ footer .credits a {
 ======================================*/
 
 #sendmessage {
-  color: #0078ff;
-  border: 1px solid #0078ff;
+  color: var(--purpleDark);
+  border: 1px solid var(--purpleDarker);
   display: none;
   text-align: center;
   padding: 15px;
@@ -1280,4 +1280,16 @@ footer .credits a {
 .edu-logo {
   transition: transform 0.5s;
   transition-timing-function: ease-out;
+}
+/* scroll animation */
+
+.hidden {
+  transform: translateY(10%);
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }

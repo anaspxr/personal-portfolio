@@ -15,6 +15,7 @@ function sendMail() {
       document.getElementById("email").value = "";
       document.getElementById("message").value = "";
       document.getElementById("subject").value = "";
+      document.getElementById("sendmessage").style.display = "block";
     })
     .catch((err) => {
       console.log(err);

@@ -127,3 +127,28 @@
     },
   });
 })(jQuery);
+
+//animations
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+// const progressObserver = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.style.width = `${entry.target.getAttribute(
+//         "aria-valuenow"
+//       )}%`;
+//     }
+//   });
+// });
+// const progressBar = document.querySelectorAll(".progress-bar");
+// progressBar.forEach((el) => progressObserver.observe(el));
